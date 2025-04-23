@@ -53,6 +53,7 @@
   
   .moreFromArtist {
     margin: 2rem;
+    height: 16vw;
   }
   
   .moreImagesGrid {
@@ -62,8 +63,8 @@
   }
   
   .moreImage {
-    width: 120px;
-    height: 120px;
+    width: 200px;
+    height: 200px;
     object-fit: cover;
     border-radius: 8px;
     border: 2px solid #eee;
