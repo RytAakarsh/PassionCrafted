@@ -1,4 +1,5 @@
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "./MainSection.module.css";
 
 import img1 from '../assets/Picture/1.png';
@@ -32,10 +33,9 @@ const paintings = [
   },
 ];
 
-
-
 function MainSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const navigate = useNavigate();
 
   const goToSlide = (index) => {
     setCurrentIndex(index);
@@ -47,39 +47,77 @@ function MainSection() {
 
   return (
     <div className={styles.mainSection}>
-      <div className={styles.mainLeft}>
+      {/* Left Section */}
+      <div className={`${styles.mainLeft} ${currentIndex === 3 ? styles.centerContent : ""}`}>
         <div className={styles.sliderContainer}>
-          <img
-            src={paintings[currentIndex].src}
-            alt={paintings[currentIndex].alt}
-            className={styles.paintingImage}
-          />
-          <div className={styles.sliderDots}>
-            {paintings.map((_, idx) => (
-              <button
-                key={idx}
-                aria-label={`Slide ${idx + 1}`}
-                className={`${styles.dot} ${idx === currentIndex ? styles.activeDot : ""}`}
-                onClick={() => goToSlide(idx)}
+          {currentIndex !== 3 && (
+            <>
+              <img
+                src={paintings[currentIndex].src}
+                alt={paintings[currentIndex].alt}
+                className={styles.paintingImage}
               />
-            ))}
-            <button
-              className={styles.nextButton}
-              onClick={nextSlide}
-              aria-label="Next slide"
-            >
-              ›
-            </button>
-          </div>
+              <div className={styles.sliderDots}>
+                {paintings.map((_, idx) => (
+                  <button
+                    key={idx}
+                    aria-label={`Slide ${idx + 1}`}
+                    className={`${styles.dot} ${idx === currentIndex ? styles.activeDot : ""}`}
+                    onClick={() => goToSlide(idx)}
+                  />
+                ))}
+                <button
+                  className={styles.nextButton}
+                  onClick={nextSlide}
+                  aria-label="Next slide"
+                >
+                  ›
+                </button>
+              </div>
+            </>
+          )}
         </div>
       </div>
+
+      {/* Right Section */}
       <div className={styles.mainRight}>
-        <h1 className={styles.paintingName}>{paintings[currentIndex].title}</h1>
-        <p className={styles.artistName}>{paintings[currentIndex].artist}</p>
-        <div className={styles.buttonGroup}>
-          <button className={styles.interestedButton}>Interested</button>
-          <button className={styles.knowMoreButton}>Know More</button>
-        </div>
+        {currentIndex === 3 ? (
+          <div className={`${styles.viewAllSection} ${styles.centered}`}>
+            <h1 className={styles.viewAllHeading}>View All Paintings</h1>
+            <button
+              className={styles.viewAllButton}
+              onClick={() => navigate("/paintings")}
+            >
+              View All
+            </button>
+            <div className={styles.sliderDots}>
+              {paintings.map((_, idx) => (
+                <button
+                  key={idx}
+                  aria-label={`Slide ${idx + 1}`}
+                  className={`${styles.dot} ${idx === currentIndex ? styles.activeDot : ""}`}
+                  onClick={() => goToSlide(idx)}
+                />
+              ))}
+              <button
+                className={styles.nextButton}
+                onClick={nextSlide}
+                aria-label="Next slide"
+              >
+                ›
+              </button>
+            </div>
+          </div>
+        ) : (
+          <>
+            <h1 className={styles.paintingName}>{paintings[currentIndex].title}</h1>
+            <p className={styles.artistName}>{paintings[currentIndex].artist}</p>
+            <div className={styles.buttonGroup}>
+              <button className={styles.interestedButton}>Interested</button>
+              <button className={styles.knowMoreButton}>Know More</button>
+            </div>
+          </>
+        )}
       </div>
     </div>
   );
