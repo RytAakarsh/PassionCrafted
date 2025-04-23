@@ -1,13 +1,22 @@
-import { useState } from 'react';
+import React, { useState } from 'react';
 import styles from './Navbar.module.css';
 import Logo from '../assets/logos/MainLogo.png';
+import ContactForm from './ContactForm'; // Import ContactForm
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [showContactForm, setShowContactForm] = useState(false); // State for ContactForm
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
+    const openContactForm = () => {
+        setShowContactForm(true);
+    };
+
+    const closeContactForm = () => {
+        setShowContactForm(false);
+    };
 
   return (
     <div className={styles.navbar}>
@@ -28,8 +37,11 @@ function Navbar() {
         <a href="/paintings">Paintings</a>
         <a href="/collections">Collections</a>
         <a href="/about">About</a>
-        <a href="/contact" style={{color: '#9C1D32'}}>Contact</a>
+        <button onClick={openContactForm} style={{ color: '#9C1D32', background: 'none', border: 'none', cursor: 'pointer', fontSize: '16px' }}> {/* Changed to button */}
+          Contact
+        </button>
       </div>
+        {showContactForm && <ContactForm onClose={closeContactForm} />}  {/* Conditionally render ContactForm */}
     </div>
   )
 }
