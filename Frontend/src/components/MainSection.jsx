@@ -2,9 +2,11 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./MainSection.module.css";
 
-import img1 from '../assets/Picture/1.png';
-import img2 from '../assets/Picture/2.png';
-import img3 from '../assets/Picture/3.png';
+import img1 from "../assets/Picture/1.png";
+import img2 from "../assets/Picture/2.png";
+import img3 from "../assets/Picture/3.png";
+
+import Interested from "./interested"; // Importing the popup
 
 const paintings = [
   {
@@ -35,6 +37,7 @@ const paintings = [
 
 function MainSection() {
   const [currentIndex, setCurrentIndex] = useState(0);
+  const [showPopup, setShowPopup] = useState(false);
   const navigate = useNavigate();
 
   const goToSlide = (index) => {
@@ -113,12 +116,20 @@ function MainSection() {
             <h1 className={styles.paintingName}>{paintings[currentIndex].title}</h1>
             <p className={styles.artistName}>{paintings[currentIndex].artist}</p>
             <div className={styles.buttonGroup}>
-              <button className={styles.interestedButton}>Interested</button>
+              <button
+                className={styles.interestedButton}
+                onClick={() => setShowPopup(true)}
+              >
+                Interested
+              </button>
               <button className={styles.knowMoreButton}>Know More</button>
             </div>
           </>
         )}
       </div>
+
+      {/* Popup */}
+      {showPopup && <Interested onClose={() => setShowPopup(false)} />}
     </div>
   );
 }
