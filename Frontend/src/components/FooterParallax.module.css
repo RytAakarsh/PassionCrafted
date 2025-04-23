@@ -1,0 +1,107 @@
+/* Footer wrapper: default fixed footer for desktop */
+.footerWrapper {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    height: 420px;
+    width: 100%;
+    background: url('../assets/Picture/footerBack.png') no-repeat center center;
+    background-size: cover;
+    z-index: -1; /* Push behind main content */
+}
+
+/* Footer content: desktop layout */
+.footerContent {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    color: #000;
+}
+
+.footerTop {
+    background: #000;
+    width: 100%;
+    padding: 0.5rem 0;
+    text-align: center;
+}
+
+.backToTop {
+    color: #9b2c2c;
+    font-size: 1.25rem;
+    font-weight: 600;
+    cursor: pointer;
+}
+
+.contentBox {
+    display: flex;
+    flex-direction: row; /* Desktop layout */
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 3vw;
+    gap: 2rem;
+}
+
+.footerNav {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: flex-start; /* Desktop layout */
+}
+
+.footerLink {
+    color: #111;
+    font-size: 1.1rem;
+    font-weight: 600;
+    text-decoration: none;
+    transition: color 0.2s;
+}
+
+.footerLink:hover,
+.active {
+    color: #9b2c2c;
+}
+
+.footerLogo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.logoImg {
+    height: 320px;
+    width: 600px;
+    max-width: 100%;
+}
+
+/* Mobile layout styles */
+@media (max-width: 899px) {
+    /* Mobile footer wrapper */
+    .footerWrapper {
+        position: relative;
+        width: 600px;
+        height: auto;
+        z-index: 1;
+    }
+
+    /* Mobile layout for contentBox */
+    .contentBox {
+        flex-direction: column-reverse;
+        justify-content: center;
+        align-items: center;
+        padding: 1.5rem 3vw;
+        gap: 2rem;
+    }
+
+    /* Mobile footerNav */
+    .footerNav {
+        align-items: center;
+    }
+
+    /* Mobile footer logo */
+    .logoImg {
+        height: 220px;
+        width: auto;
+        max-width: 80vw;
+    }
+}
