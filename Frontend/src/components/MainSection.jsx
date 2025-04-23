@@ -1,33 +1,35 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import styles from "./MainSection.module.css";
-
 import img1 from "../assets/Picture/1.png";
 import img2 from "../assets/Picture/2.png";
 import img3 from "../assets/Picture/3.png";
-
-import Interested from "./interested"; // Importing the popup
+import Interested from "./interested";
 
 const paintings = [
   {
+    id: 1,
     src: img1,
     alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
     title: "Painting Name",
     artist: "By Artist name",
   },
   {
+    id: 2,
     src: img2,
     alt: "Ornate framed painting showing abstract colorful art with vibrant colors",
     title: "Abstract Colors",
     artist: "By Artist Two",
   },
   {
+    id: 3,
     src: img3,
     alt: "Ornate framed painting showing a portrait of a woman with soft brush strokes",
     title: "Woman's Portrait",
     artist: "By Artist Three",
   },
   {
+    id: 4,
     src: "https://placehold.co/600x450?text=Painting+4+Seascape+with+sunset",
     alt: "Ornate framed painting showing a seascape with sunset and waves",
     title: "Seascape Sunset",
@@ -40,13 +42,8 @@ function MainSection() {
   const [showPopup, setShowPopup] = useState(false);
   const navigate = useNavigate();
 
-  const goToSlide = (index) => {
-    setCurrentIndex(index);
-  };
-
-  const nextSlide = () => {
-    setCurrentIndex((prev) => (prev + 1) % paintings.length);
-  };
+  const goToSlide = (index) => setCurrentIndex(index);
+  const nextSlide = () => setCurrentIndex((prev) => (prev + 1) % paintings.length);
 
   return (
     <div className={styles.mainSection}>
@@ -122,7 +119,12 @@ function MainSection() {
               >
                 Interested
               </button>
-              <button className={styles.knowMoreButton}>Know More</button>
+              <button
+                className={styles.knowMoreButton}
+                onClick={() => navigate(`/painting/${paintings[currentIndex].id}`)}
+              >
+                Know More
+              </button>
             </div>
           </>
         )}
