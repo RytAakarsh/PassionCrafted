@@ -1,49 +1,61 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // ✅ Add this line
 import styles from './Navbar.module.css';
 import Logo from '../assets/logos/MainLogo.png';
-import ContactForm from './ContactForm'; // Import ContactForm
+import ContactForm from './ContactForm';
 
 function Navbar() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-    const [showContactForm, setShowContactForm] = useState(false); // State for ContactForm
+  const [showContactForm, setShowContactForm] = useState(false);
 
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen);
   };
-    const openContactForm = () => {
-        setShowContactForm(true);
-    };
 
-    const closeContactForm = () => {
-        setShowContactForm(false);
-    };
+  const openContactForm = () => {
+    setShowContactForm(true);
+  };
+
+  const closeContactForm = () => {
+    setShowContactForm(false);
+  };
 
   return (
     <div className={styles.navbar}>
       <div className={styles.logoContainer}>
-        <img src={Logo} alt="Logo" className={styles.logo} />
+        <Link to="/">
+          <img src={Logo} alt="Logo" className={styles.logo} />
+        </Link>
       </div>
-      
-      {/* Hamburger Icon - Visible only on mobile */}
+
       <div className={styles.hamburger} onClick={toggleMenu}>
         <div className={styles.bar}></div>
         <div className={styles.bar}></div>
         <div className={styles.bar}></div>
       </div>
-      
-      {/* Navigation Links - Hidden on mobile when menu is closed */}
+
       <div className={`${styles.links} ${isMenuOpen ? styles.active : ''}`}>
-        <a href="/">Home</a>
-        <a href="/paintings">Paintings</a>
-        <a href="/collections">Collections</a>
-        <a href="/about">About</a>
-        <button onClick={openContactForm} style={{ color: '#9C1D32', background: 'none', border: 'none', cursor: 'pointer', fontSize: '16px' }}> {/* Changed to button */}
+        <Link to="/">Home</Link>
+        <Link to="/paintings">Paintings</Link>
+        <Link to="/collections">Collections</Link>
+        <Link to="/about">About</Link>
+        <button
+          onClick={openContactForm}
+          style={{
+            color: '#9C1D32',
+            background: 'none',
+            border: 'none',
+            cursor: 'pointer',
+            fontSize: '16px',
+          }}
+        >
           Contact
         </button>
       </div>
-        {showContactForm && <ContactForm onClose={closeContactForm} />}  {/* Conditionally render ContactForm */}
+
+      {showContactForm && <ContactForm onClose={closeContactForm} />}
     </div>
-  )
+  );
 }
 
 export default Navbar;

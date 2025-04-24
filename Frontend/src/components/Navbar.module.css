@@ -61,6 +61,9 @@ html, body{
 /* Mobile styles */
 
 @media (max-width: 768px) {
+    .navbar{
+        width: 550px;
+    }
     .hamburger {
         display: block;
     }

@@ -72,13 +72,13 @@ const FooterParallax = () => {
             <a href="/paintings" className={styles.footerLink}>PAINTINGS</a>
             <a href="/collections" className={styles.footerLink}>COLLECTIONS</a>
             <a href="/about" className={styles.footerLink}>ABOUT</a>
-            <button
+            {/* <button
               onClick={openContactForm}
               className={`${styles.footerLink} ${styles.active}`}
               style={{ background: 'none', border: 'none', cursor: 'pointer', color: 'inherit', padding: 0, color: '#9C1D32', fontSize: '16px'  }} 
             >
               CONTACT
-            </button>
+            </button> */}
           </nav>
           <div className={styles.footerLogo}>
             <img

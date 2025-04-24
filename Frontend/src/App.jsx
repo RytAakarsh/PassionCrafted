@@ -6,6 +6,7 @@ import MainSection from './components/MainSection';
 import AboutUs from './components/AboutUs';
 import FooterParallax from './components/FooterParallax';
 import PaintingDetail from './components/PaintingDetail';
+import Collections from './components/Collections'; // <-- Import Collections
 
 function App() {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 900);
@@ -17,7 +18,6 @@ function App() {
     return () => window.removeEventListener('resize', handleResize);
   }, []);
 
-  // Function to determine if the Navbar should be displayed
   const showNavbar = () => {
     return location.pathname !== `/painting/${location.pathname.split('/')[2]}`;
   };
@@ -29,7 +29,8 @@ function App() {
         <Routes>
           <Route path="/" element={<><MainSection /><AboutUs /></>} />
           <Route path="/painting/:id" element={<PaintingDetail />} />
-          <Route path="/about" element={<AboutUs />} /> 
+          <Route path="/about" element={<AboutUs />} />
+          <Route path="/collections" element={<Collections />} /> {/* <-- Add Collections Route */}
         </Routes>
       </div>
       <FooterParallax />
