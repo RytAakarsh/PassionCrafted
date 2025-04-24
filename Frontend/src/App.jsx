@@ -6,7 +6,8 @@ import MainSection from './components/MainSection';
 import AboutUs from './components/AboutUs';
 import FooterParallax from './components/FooterParallax';
 import PaintingDetail from './components/PaintingDetail';
-import Collections from './components/Collections'; // <-- Import Collections
+import Collections from './components/Collections';
+import Paintings from './components/Paintings'; // Import the new component
 
 function App() {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 900);
@@ -28,9 +29,10 @@ function App() {
       <div style={{ marginBottom: isDesktop ? '460px' : '0' }}>
         <Routes>
           <Route path="/" element={<><MainSection /><AboutUs /></>} />
+          <Route path="/paintings" element={<Paintings />} /> {/* Add this route */}
           <Route path="/painting/:id" element={<PaintingDetail />} />
           <Route path="/about" element={<AboutUs />} />
-          <Route path="/collections" element={<Collections />} /> {/* <-- Add Collections Route */}
+          <Route path="/collections" element={<Collections />} />
         </Routes>
       </div>
       <FooterParallax />
