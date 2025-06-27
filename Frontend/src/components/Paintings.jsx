@@ -58,165 +58,478 @@ import imgR47 from "../assets/Picture/Reshmi RO (47).jpeg";
 const allPaintings = [
   {
     id: 1,
-    src: img1,
+    src: imgR1,
     alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
-    title: "Painting Name",
-    artist: "Artist name",
+    // title: "Painting Name",
+    artist: "Reshmi",
     type: "Landscape",
     dimension: "24x36",
-    uploadDate: "2024-01-15"
+    uploadDate: "2025-06-27"
   },
   {
     id: 2,
-    src: img2,
-    alt: "Ornate framed painting showing abstract colorful art with vibrant colors",
-    title: "Abstract Colors",
-    artist: "Artist Two",
-    type: "Abstract",
-    dimension: "30x40",
-    uploadDate: "2024-02-10"
+    src: imgR2,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
   },
   {
     id: 3,
-    src: img3,
-    alt: "Ornate framed painting showing a portrait of a woman with soft brush strokes",
-    title: "Woman's Portrait",
-    artist: "Artist Three",
-    type: "Portrait",
-    dimension: "18x24",
-    uploadDate: "2024-03-05"
-  },
-  // Duplicate paintings for demonstration (replace with actual paintings)
-  {
-    id: 4,
-    src: img1,
+    src: imgR3,
     alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
-    title: "Painting Name",
-    artist: "Artist name",
+    // title: "Painting Name",
+    artist: "Reshmi",
     type: "Landscape",
     dimension: "24x36",
-    uploadDate: "2024-01-20"
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 4,
+    src: imgR4,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
   },
   {
     id: 5,
-    src: img2,
-    alt: "Ornate framed painting showing abstract colorful art with vibrant colors",
-    title: "Abstract Colors",
-    artist: "Artist Two",
-    type: "Abstract",
-    dimension: "30x40",
-    uploadDate: "2024-02-15"
+    src: imgR5,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
   },
   {
     id: 6,
-    src: img3,
-    alt: "Ornate framed painting showing a portrait of a woman with soft brush strokes",
-    title: "Woman's Portrait",
-    artist: "Artist Three",
-    type: "Portrait",
-    dimension: "18x24",
-    uploadDate: "2024-03-10"
+    src: imgR6,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
   },
   {
     id: 7,
-    src: img1,
+    src: imgR7,
     alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
-    title: "Painting Name",
-    artist: "Artist name",
+    // title: "Painting Name",
+    artist: "Reshmi",
     type: "Landscape",
     dimension: "24x36",
-    uploadDate: "2024-01-25"
+    uploadDate: "2025-06-27"
   },
   {
     id: 8,
-    src: img2,
-    alt: "Ornate framed painting showing abstract colorful art with vibrant colors",
-    title: "Abstract Colors",
-    artist: "Artist Two",
-    type: "Abstract",
-    dimension: "30x40",
-    uploadDate: "2024-02-20"
+    src: imgR8,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
   },
   {
     id: 9,
-    src: img3,
-    alt: "Ornate framed painting showing a portrait of a woman with soft brush strokes",
-    title: "Woman's Portrait",
-    artist: "Artist Three",
-    type: "Portrait",
-    dimension: "18x24",
-    uploadDate: "2024-03-15"
+    src: imgR9,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
   },
   {
     id: 10,
-    src: img3,
-    alt: "Ornate framed painting showing a portrait of a woman with soft brush strokes",
-    title: "Woman's Portrait",
-    artist: "Artist Three",
-    type: "Portrait",
-    dimension: "18x24",
-    uploadDate: "2024-03-15"
+    src: imgR10,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
   },
   {
     id: 11,
-    src: img3,
-    alt: "Ornate framed painting showing a portrait of a woman with soft brush strokes",
-    title: "Woman's Portrait",
-    artist: "Artist Three",
-    type: "Portrait",
-    dimension: "18x24",
-    uploadDate: "2024-03-15"
+    src: imgR11,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
   },
   {
     id: 12,
-    src: img3,
-    alt: "Ornate framed painting showing a portrait of a woman with soft brush strokes",
-    title: "Woman's Portrait",
-    artist: "Artist Three",
-    type: "Portrait",
-    dimension: "18x24",
-    uploadDate: "2024-03-15"
+    src: imgR12,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
   },
   {
     id: 13,
-    src: img3,
-    alt: "Ornate framed painting showing a portrait of a woman with soft brush strokes",
-    title: "Woman's Portrait",
-    artist: "Artist Three",
-    type: "Portrait",
-    dimension: "18x24",
-    uploadDate: "2024-03-15"
+    src: imgR13,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
   },
   {
     id: 14,
-    src: img3,
-    alt: "Ornate framed painting showing a portrait of a woman with soft brush strokes",
-    title: "Woman's Portrait",
-    artist: "Artist Three",
-    type: "Portrait",
-    dimension: "18x24",
-    uploadDate: "2024-03-15"
+    src: imgR14,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
   },
   {
     id: 15,
-    src: img3,
-    alt: "Ornate framed painting showing a portrait of a woman with soft brush strokes",
-    title: "Woman's Portrait",
-    artist: "Artist Three",
-    type: "Portrait",
-    dimension: "18x24",
-    uploadDate: "2024-03-15"
+    src: imgR15,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
   },
   {
     id: 16,
-    src: img3,
-    alt: "Ornate framed painting showing a portrait of a woman with soft brush strokes",
-    title: "Woman's Portrait",
-    artist: "Artist Three",
-    type: "Portrait",
-    dimension: "18x24",
-    uploadDate: "2024-03-15"
+    src: imgR16,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
   },
+  {
+    id: 17,
+    src: imgR17,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 18,
+    src: imgR18,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 19,
+    src: imgR19,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 20,
+    src: imgR20,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 21,
+    src: imgR21,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 22,
+    src: imgR22,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 23,
+    src: imgR23,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 24,
+    src: imgR24,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 25,
+    src: imgR25,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 26,
+    src: imgR26,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 27,
+    src: imgR27,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 28,
+    src: imgR28,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 29,
+    src: imgR29,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 30,
+    src: imgR30,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 31,
+    src: imgR31,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 32,
+    src: imgR32,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 33,
+    src: imgR33,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 34,
+    src: imgR34,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 35,
+    src: imgR35,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 36,
+    src: imgR36,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 37,
+    src: imgR37,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 38,
+    src: imgR38,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 39,
+    src: imgR39,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 40,
+    src: imgR40,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 41,
+    src: imgR41,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 42,
+    src: imgR42,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 43,
+    src: imgR43,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 44,
+    src: imgR44,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 45,
+    src: imgR45,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 46,
+    src: imgR46,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  },
+  {
+    id: 47,
+    src: imgR47,
+    alt: "Ornate framed painting showing a landscape with trees and a path in warm yellow and brown tones",
+    // title: "Painting Name",
+    artist: "Reshmi",
+    type: "Landscape",
+    dimension: "24x36",
+    uploadDate: "2025-06-27"
+  }
+  
+
+
+  
 ];
 
 function Paintings() {

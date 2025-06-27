@@ -75,6 +75,7 @@
       flex-direction: column;
       padding: 1rem;
       gap: 1rem;
+      width: 550px;
     }
     .mainImageSection, .infoSection {
       flex: 1 1 100%;
@@ -85,5 +86,24 @@
     .artist {
       font-size: 1.2rem;
     }
+    .moreFromArtist {
+      width: 550px;
+      height: auto;
+    }
+    .moreImagesGrid{
+      display: grid;
+      grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
+      gap: 1.6rem;
+      margin-right: 15px;
+      margin-left: -10px;
+    }
+    .moreImage {
+    width: 180px;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+    border: 2px solid #eee;
+  }
+  
   }
   

@@ -50,6 +50,8 @@
   display: flex;
   justify-content: center;
   align-items: center;
+  border: 8px solid #d4c89c;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
 }
 
 .paintingImage {
