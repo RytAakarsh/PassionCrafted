@@ -7,8 +7,7 @@ import AboutUs from './components/AboutUs';
 import FooterParallax from './components/FooterParallax';
 import PaintingDetail from './components/PaintingDetail';
 import Collections from './components/Collections';
-import Paintings from './components/Paintings'; // Import the new component
-
+import Paintings from './components/Paintings';   
 function App() {
   const [isDesktop, setIsDesktop] = useState(window.innerWidth >= 900);
   const location = useLocation();
@@ -29,7 +28,7 @@ function App() {
       <div style={{ marginBottom: isDesktop ? '460px' : '0' }}>
         <Routes>
           <Route path="/" element={<><MainSection /><AboutUs /></>} />
-          <Route path="/paintings" element={<Paintings />} /> {/* Add this route */}
+          <Route path="/paintings" element={<Paintings />} /> 
           <Route path="/painting/:id" element={<PaintingDetail />} />
           <Route path="/about" element={<AboutUs />} />
           <Route path="/collections" element={<Collections />} />

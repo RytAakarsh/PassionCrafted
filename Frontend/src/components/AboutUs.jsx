@@ -16,12 +16,12 @@ const AboutUs = () => {
           <img
             alt="Wall with multiple framed paintings arranged in a gallery setting"
             className={styles.image}
-            src="https://storage.googleapis.com/a1aa/image/5882f328-1ed6-446d-bf3b-8f0abed248cd.jpg"
+            src="https://images.unsplash.com/photo-1554907984-15263bfd63bd?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           />
           <div className={styles.card}>
             <h3 className={styles.cardTitle}>For Collectors</h3>
             <p>
-              We curate high-quality paintings that resonate with your unique taste and vision. Our journey begins online, offering a thoughtfully designed platform to explore exceptional artworks. From the initial discovery to personalized interactions, we ensure every step of your experience is tailored to your needs. With meticulous care before, during, and after your purchase, we aim to make collecting art a joyful and memorable journey.
+              We curate high-quality paintings that resonate with your unique taste and vision. Our journey begins online, offering a thoughtfully designed platform to explore exceptional artworks. From the initial discovery to personalized interactions, we ensure every step of your experience is tailored to your needs.
             </p>
           </div>
         </div>
@@ -39,7 +39,7 @@ const AboutUs = () => {
           <img
             alt="Group of four people working together around a laptop"
             className={styles.image}
-            src="https://storage.googleapis.com/a1aa/image/beefd642-6d87-4e42-0cbf-0f8b17807063.jpg"
+            src="https://images.unsplash.com/photo-1568992688065-536aad8a12f6?q=80&w=1332&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
           />
           <div className={styles.card}>
             <h3 className={styles.cardTitle}>The Passion Crafted Team</h3>

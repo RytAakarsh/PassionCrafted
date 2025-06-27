@@ -9,7 +9,7 @@ const paintingCollections = [
   {
     title: "Aa Collection",
     paintings: [
-      { src: img1, title: "Painting Name", artist: "By Artist name" },
+      { src: img1, title: "", artist: "By Artist name" },
       { src: img2, title: "Painting Name", artist: "By Artist name" },
       { src: img3, title: "Painting Name", artist: "By Artist name" },
       { src: img1, title: "Painting Name", artist: "By Artist name" },

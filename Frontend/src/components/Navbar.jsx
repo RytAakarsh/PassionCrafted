@@ -39,18 +39,13 @@ function Navbar() {
         <Link to="/paintings">Paintings</Link>
         <Link to="/collections">Collections</Link>
         <Link to="/about">About</Link>
-        <button
-          onClick={openContactForm}
-          style={{
-            color: '#9C1D32',
-            background: 'none',
-            border: 'none',
-            cursor: 'pointer',
-            fontSize: '16px',
-          }}
-        >
-          Contact
-        </button>
+       <button
+  onClick={openContactForm}
+  className={`${styles.contactButton} ${isMenuOpen ? styles.active : ''}`}
+>
+  Contact
+</button>
+
       </div>
 
       {showContactForm && <ContactForm onClose={closeContactForm} />}

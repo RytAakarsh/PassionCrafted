@@ -58,6 +58,34 @@ html, body{
     transition: all 0.3s ease;
 }
 
+.contactButton {
+  color: #9C1D32;
+  background: none;
+  border: none;
+  cursor: pointer;
+  font-size: 16px;
+  font-weight: 600;
+  transition: color 0.3s ease;
+}
+
+.contactButton:hover {
+  color: #6e1420;
+}
+
+/* ✅ Responsive Font Size */
+@media screen and (max-width: 768px) {
+  .contactButton {
+    font-size: 26px;
+  }
+}
+
+@media screen and (min-width: 769px) {
+  .contactButton {
+    font-size: 16px;
+  }
+}
+
+
 /* Mobile styles */
 
 @media (max-width: 768px) {
@@ -85,10 +113,17 @@ html, body{
         box-shadow: -5px 0 15px rgba(0, 0, 0, 0.1);
     }
     
+    .links a {
+    color: black;
+    font-size: 26px;
+}
+
     .links.active {
         right: 0;
+        height: 100%;
     }
-    
+
+
     /* Optional: Animate hamburger to X when menu is open */
     .hamburger.active .bar:nth-child(1) {
         transform: translateY(8px) rotate(45deg);

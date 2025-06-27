@@ -121,12 +121,35 @@ html, body {
 @media (max-width: 768px) {
   .paintingName {
     padding-top: 20px;
+    font-size: 1.85rem;
   }
+}
+
+.sliderContainer {
+  margin-left: 210px;
+
+}
+.sliderContainer img {
+ height: 500px;
+ width: 550px;
+
+}
+
+.mainRight {
+  margin-left: 20px;
+}
+
+.mainRight h1 {
+  margin-left: 50px;
+  font-size: 1.4rem;
+  width: 100%;
 }
 
 .artistName {
   font-family: 'Italianno', cursive;
-  font-size: 1.125rem;
+  margin-left: 70px;
+  align-items: center;
+  font-size: 1.0rem;
   font-style: italic;
   color: #4a4a4a;
   margin-top: 0.25rem;
@@ -136,6 +159,7 @@ html, body {
   margin-top: 2rem;
   display: flex;
   gap: 1rem;
+  margin-left: 20px;
 }
 
 .interestedButton {
