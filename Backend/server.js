@@ -1,11 +1,12 @@
-require('dotenv').config();
-const express = require('express');
-const { createTransport } = require('nodemailer');
-const cors = require('cors');
+import dotenv from 'dotenv';
+import express from 'express';
+import { createTransport } from 'nodemailer';
+import cors from 'cors';
+
+dotenv.config();
 
 const app = express();
-app.use(cors());
-app.use(express.json());
+
 
 
 // ✅ Configure Nodemailer
