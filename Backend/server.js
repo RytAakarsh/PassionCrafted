@@ -1,13 +1,13 @@
-const express = require('express');
-const nodemailer = require('nodemailer');
-const cors = require('cors');
+import express, { json } from 'express';
+import { createTransport } from 'nodemailer';
+import cors from 'cors';
 
 const app = express();
 app.use(cors());
-app.use(express.json());
+app.use(json());
 
 // ✅ Configure Nodemailer
-const transporter = nodemailer.createTransport({
+const transporter = createTransport({
   service: 'gmail',
   auth: {
     user: 'passioncrafted001@gmail.com',  // ✅ Your Gmail
