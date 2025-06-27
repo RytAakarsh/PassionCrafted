@@ -1,61 +1,81 @@
-
-  
+/* ========== Layout ========== */
 .container {
-    padding: 2rem;
-    max-width: 1200px;
-    margin: 0 auto;
-  }
-  
-  .searchInput {
-    width: 100%;
-    padding: 0.75rem 1rem;
-    font-size: 1rem;
-    border: 1px solid #ccc;
-    border-radius: 8px;
-    margin-bottom: 2rem;
-  }
-  
-  .collectionSection {
-    margin-bottom: 2rem;
-  }
-  
-  .collectionTitle {
-    font-size: 1.5rem;
-    color: #891a2f;
-    margin-bottom: 1rem;
-    font-weight: bold;
-  }
-  
-  .paintingsGrid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(150px, 1fr));
-    gap: 1.5rem;
-  }
-  
-  .paintingCard {
-    text-align: center;
-  }
-  
-  .paintingImage {
-    width: 100%;
-    height: auto;
-    object-fit: contain;
-    border: 2px solid #ccc;
-    border-radius: 6px;
-  }
-  
-  .paintingName {
-    font-weight: bold;
-    margin-top: 0.5rem;
-  }
-  
-  .artistName {
-    font-style: italic;
-    color: #666;
-    font-size: 0.9rem;
-  }
-  
-  @media (max-width: 600px) {
+  padding: 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.searchInput {
+  width: 100%;
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  margin-bottom: 2rem;
+}
+
+/* ========== Collection Section ========== */
+.collectionSection {
+  margin-bottom: 2rem;
+}
+
+.collectionTitle {
+  margin-top: 10px;
+  font-size: 1.7rem;
+  color: #891a2f;
+  margin-bottom: 1rem;
+  font-weight: bold;
+}
+
+/* ========== Paintings Grid ========== */
+.paintingsGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr)); /* Increase column min width */
+  gap: 2rem; /* Slightly more gap for breathing space */
+}
+
+/* ========== Painting Card ========== */
+.paintingCard {
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 0.5rem;
+  cursor: pointer;
+}
+
+.imageWrapper {
+  width: 100%;
+  height: 290px; /* Increased height */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.paintingImage {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  border: 2px solid #ccc;
+  border-radius: 6px;
+}
+
+/* ========== Text Styles ========== */
+.paintingName {
+  font-weight: bold;
+  margin: 0;
+}
+
+.artistName {
+  font-style: italic;
+  color: #666;
+  font-size: 1rem;
+  margin: 0;
+  min-height: 16px;
+}
+
+
+@media (max-width: 600px) {
     .container {
       padding: 1rem;
       width: 550px;
