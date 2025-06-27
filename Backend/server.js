@@ -7,25 +7,30 @@ dotenv.config();
 
 const app = express();
 
+// ✅ Middleware
+app.use(cors());
+app.use(express.json()); // 🔥 Must-have for parsing JSON data
 
-
-// ✅ Configure Nodemailer
-
+// ✅ Nodemailer Transporter
 const transporter = createTransport({
   service: 'gmail',
   auth: {
     user: process.env.EMAIL_USER,
-    pass: process.env.EMAIL_PASS          
+    pass: process.env.EMAIL_PASS
   }
 });
 
-// ✅ API for Interested Form (NO Query)
+// ✅ API for Interested Form (No Query)
 app.post('/send-interested-email', (req, res) => {
   const { name, email, country, zipcode, phone } = req.body;
 
+  if (!name || !email || !country || !zipcode || !phone) {
+    return res.status(400).send({ success: false, message: 'Missing required fields' });
+  }
+
   const mailOptions = {
-    from: 'passioncrafted001@gmail.com',
-    to: 'passioncrafted001@gmail.com',
+    from: process.env.EMAIL_USER,
+    to: process.env.EMAIL_USER,
     subject: 'New Interested Form Submission - Passion Crafted',
     html: `
       <h2>New Interested Form Submission</h2>
@@ -40,21 +45,25 @@ app.post('/send-interested-email', (req, res) => {
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.error('❌ Error sending email:', error);
-      res.status(500).send({ success: false, message: 'Email not sent' });
+      return res.status(500).send({ success: false, message: 'Email not sent' });
     } else {
       console.log('✅ Email sent:', info.response);
-      res.send({ success: true, message: 'Email sent successfully' });
+      return res.send({ success: true, message: 'Email sent successfully' });
     }
   });
 });
 
-// ✅ API for Contact Us Form (WITH Query)
+// ✅ API for Contact Form (Includes Query)
 app.post('/send-contact-email', (req, res) => {
   const { name, email, country, zipcode, phone, query } = req.body;
 
+  if (!name || !email || !country || !zipcode || !phone || !query) {
+    return res.status(400).send({ success: false, message: 'Missing required fields' });
+  }
+
   const mailOptions = {
-    from: 'passioncrafted001@gmail.com',
-    to: 'passioncrafted001@gmail.com',
+    from: process.env.EMAIL_USER,
+    to: process.env.EMAIL_USER,
     subject: 'New Contact Us Inquiry - Passion Crafted',
     html: `
       <h2>New Contact Us Inquiry</h2>
@@ -70,10 +79,10 @@ app.post('/send-contact-email', (req, res) => {
   transporter.sendMail(mailOptions, (error, info) => {
     if (error) {
       console.error('❌ Error sending email:', error);
-      res.status(500).send({ success: false, message: 'Email not sent' });
+      return res.status(500).send({ success: false, message: 'Email not sent' });
     } else {
       console.log('✅ Email sent:', info.response);
-      res.send({ success: true, message: 'Email sent successfully' });
+      return res.send({ success: true, message: 'Email sent successfully' });
     }
   });
 });
