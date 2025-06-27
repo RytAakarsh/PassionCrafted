@@ -1,17 +1,20 @@
-import express, { json } from 'express';
-import { createTransport } from 'nodemailer';
-import cors from 'cors';
+require('dotenv').config();
+const express = require('express');
+const { createTransport } = require('nodemailer');
+const cors = require('cors');
 
 const app = express();
 app.use(cors());
-app.use(json());
+app.use(express.json());
+
 
 // ✅ Configure Nodemailer
+
 const transporter = createTransport({
   service: 'gmail',
   auth: {
-    user: 'passioncrafted001@gmail.com',  // ✅ Your Gmail
-    pass: 'dxbjpfrcfadacofn'             // ✅ App Password (Not Gmail password)
+    user: process.env.EMAIL_USER,
+    pass: process.env.EMAIL_PASS          
   }
 });
 
