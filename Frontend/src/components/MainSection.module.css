@@ -32,6 +32,9 @@ html, body {
     justify-content: center;
     align-items: start;
   }
+  .paintingName {
+    margin-top: 100px;
+  }
 }
 
 .mainLeft {
@@ -56,6 +59,9 @@ html, body {
   .mainRight {
     margin-left: 3rem;
     margin-top: 0;
+  }
+  .buttonGroup{
+    margin-left: 80px;
   }
 }
 
@@ -118,6 +124,7 @@ html, body {
   color: black;
 }
 
+
 @media (max-width: 768px) {
   .paintingName {
     padding-top: 20px;
@@ -159,7 +166,7 @@ html, body {
   margin-top: 2rem;
   display: flex;
   gap: 1rem;
-  margin-left: 20px;
+  margin-left: 40px;
 }
 
 .interestedButton {
@@ -221,4 +228,9 @@ html, body {
   height: 0;
   pointer-events: none;
   margin: 0;
+}
+@media (min-width: 768px) {
+  .buttonGroup{
+    margin-left: 80px;
+  }
 }
