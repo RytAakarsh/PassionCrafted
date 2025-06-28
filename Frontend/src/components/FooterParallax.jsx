@@ -1,7 +1,8 @@
 import React, { useState } from "react";
+import { Link } from 'react-router-dom'; // ✅ Import Link from react-router
 import styles from './FooterParallax.module.css';
 import logo from '../assets/logos/footerLogobg.png';
-import ContactForm from './ContactForm'; // Import ContactForm
+import ContactForm from './ContactForm';
 
 const FooterParallax = () => {
   const [showContactForm, setShowContactForm] = useState(false);
@@ -27,11 +28,10 @@ const FooterParallax = () => {
         </div>
         <div className={styles.contentBox}>
           <nav className={styles.footerNav}>
-            <a href="/" className={styles.footerLink}>HOME</a>
-            <a href="/paintings" className={styles.footerLink}>PAINTINGS</a>
-            <a href="/collections" className={styles.footerLink}>COLLECTIONS</a>
-            <a href="/about" className={styles.footerLink}>ABOUT</a>
-            
+            <Link to="/" className={styles.footerLink}>HOME</Link>
+            <Link to="/paintings" className={styles.footerLink}>PAINTINGS</Link>
+            <Link to="/collections" className={styles.footerLink}>COLLECTIONS</Link>
+            <Link to="/about" className={styles.footerLink}>ABOUT</Link>
           </nav>
           <div className={styles.footerLogo}>
             <img
@@ -44,9 +44,10 @@ const FooterParallax = () => {
       </div>
       
       <div className={styles.footerName}>
-         <p className={styles.footerText}>© 2025 Passion Crafted. All rights reserved | Developed by Aakarsh Mishra</p>
+        <p className={styles.footerText}>
+          © 2025 Passion Crafted. All rights reserved | Developed by Aakarsh Mishra
+        </p>
       </div>
-
 
       {showContactForm && <ContactForm onClose={closeContactForm} />}
     </div>
