@@ -1,10 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import { useNavigate } from 'react-router-dom';
 import styles from './Paintings.module.css';
-import Interested from './interested';
-import img1 from "../assets/Picture/1.png";
-import img2 from "../assets/Picture/2.png";
-import img3 from "../assets/Picture/3.png";
+import Interested from './Interested.jsx';
+
 
 import imgR1 from "../assets/Picture/Reshmi RO (1).jpeg";
 import imgR2 from "../assets/Picture/Reshmi RO (2).jpeg";

@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import styles from "./Collections.module.css";
-import Interested from "./interested";
+import Interested from "./Interested.jsx";
 
 // ✅ Import Images
 import imgR1 from "../assets/Picture/Reshmi RO (1).jpeg";

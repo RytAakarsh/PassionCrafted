@@ -4,7 +4,7 @@ import styles from "./MainSection.module.css";
 import img1 from "../assets/Picture/1.png";
 import img2 from "../assets/Picture/2.png";
 import img3 from "../assets/Picture/3.png";
-import Interested from "./interested";
+import Interested from "./Interested.jsx";
 
 const paintings = [
   {
