@@ -18,7 +18,7 @@ function Navbar() {
 
   const openContactForm = () => {
     setShowContactForm(true);
-    closeMenu(); // ✅ Close menu when clicking contact
+    closeMenu();
   };
 
   const closeContactForm = () => {
@@ -26,34 +26,44 @@ function Navbar() {
   };
 
   return (
-    <div className={styles.navbar}>
-      <div className={styles.logoContainer}>
-        <Link to="/" onClick={closeMenu}>
-          <img src={Logo} alt="Logo" className={styles.logo} />
-        </Link>
+    <>
+      <div className={styles.navbar}>
+        <div className={styles.logoContainer}>
+          <Link to="/" onClick={closeMenu}>
+            <img src={Logo} alt="Logo" className={styles.logo} />
+          </Link>
+        </div>
+
+        <div className={styles.hamburger} onClick={toggleMenu}>
+          <div className={styles.bar}></div>
+          <div className={styles.bar}></div>
+          <div className={styles.bar}></div>
+        </div>
+
+        <div className={`${styles.links} ${isMenuOpen ? styles.active : ''}`}>
+          <Link to="/" onClick={closeMenu}>Home</Link>
+          <Link to="/paintings" onClick={closeMenu}>Paintings</Link>
+          <Link to="/collections" onClick={closeMenu}>Collections</Link>
+          <Link to="/about" onClick={closeMenu}>About</Link>
+          <button
+            onClick={openContactForm}
+            className={`${styles.contactButton} ${isMenuOpen ? styles.active : ''}`}
+          >
+            Contact
+          </button>
+        </div>
       </div>
 
-      <div className={styles.hamburger} onClick={toggleMenu}>
-        <div className={styles.bar}></div>
-        <div className={styles.bar}></div>
-        <div className={styles.bar}></div>
-      </div>
-
-      <div className={`${styles.links} ${isMenuOpen ? styles.active : ''}`}>
-        <Link to="/" onClick={closeMenu}>Home</Link>
-        <Link to="/paintings" onClick={closeMenu}>Paintings</Link>
-        <Link to="/collections" onClick={closeMenu}>Collections</Link>
-        <Link to="/about" onClick={closeMenu}>About</Link>
-        <button
-          onClick={openContactForm}
-          className={`${styles.contactButton} ${isMenuOpen ? styles.active : ''}`}
-        >
-          Contact
-        </button>
-      </div>
+      {/* ✅ Click-outside overlay */}
+      {isMenuOpen && (
+        <div
+          className={styles.overlay}
+          onClick={closeMenu}
+        ></div>
+      )}
 
       {showContactForm && <ContactForm onClose={closeContactForm} />}
-    </div>
+    </>
   );
 }
 
