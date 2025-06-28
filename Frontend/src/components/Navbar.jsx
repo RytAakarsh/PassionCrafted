@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Link } from 'react-router-dom'; // ✅ Add this line
+import { Link } from 'react-router-dom';
 import styles from './Navbar.module.css';
 import Logo from '../assets/logos/MainLogo.png';
 import ContactForm from './ContactForm';
@@ -12,8 +12,13 @@ function Navbar() {
     setIsMenuOpen(!isMenuOpen);
   };
 
+  const closeMenu = () => {
+    setIsMenuOpen(false);
+  };
+
   const openContactForm = () => {
     setShowContactForm(true);
+    closeMenu(); // ✅ Close menu when clicking contact
   };
 
   const closeContactForm = () => {
@@ -23,7 +28,7 @@ function Navbar() {
   return (
     <div className={styles.navbar}>
       <div className={styles.logoContainer}>
-        <Link to="/">
+        <Link to="/" onClick={closeMenu}>
           <img src={Logo} alt="Logo" className={styles.logo} />
         </Link>
       </div>
@@ -35,17 +40,16 @@ function Navbar() {
       </div>
 
       <div className={`${styles.links} ${isMenuOpen ? styles.active : ''}`}>
-        <Link to="/">Home</Link>
-        <Link to="/paintings">Paintings</Link>
-        <Link to="/collections">Collections</Link>
-        <Link to="/about">About</Link>
-       <button
-  onClick={openContactForm}
-  className={`${styles.contactButton} ${isMenuOpen ? styles.active : ''}`}
->
-  Contact
-</button>
-
+        <Link to="/" onClick={closeMenu}>Home</Link>
+        <Link to="/paintings" onClick={closeMenu}>Paintings</Link>
+        <Link to="/collections" onClick={closeMenu}>Collections</Link>
+        <Link to="/about" onClick={closeMenu}>About</Link>
+        <button
+          onClick={openContactForm}
+          className={`${styles.contactButton} ${isMenuOpen ? styles.active : ''}`}
+        >
+          Contact
+        </button>
       </div>
 
       {showContactForm && <ContactForm onClose={closeContactForm} />}
