@@ -24,7 +24,7 @@ const ContactUs = ({ onClose }) => {
     setLoading(true);
 
     try {
-      await axios.post("http://localhost:5000/send-contact-email", formData);
+      await axios.post("https://passioncrafted.onrender.com/send-contact-email", formData);
       alert("Contact form submitted successfully!");
       onClose();
     } catch (error) {

@@ -23,7 +23,7 @@ const Interested = ({ onClose }) => {
     setLoading(true);
 
     try {
-      await axios.post("http://localhost:5000/send-interested-email", formData);
+      await axios.post("https://passioncrafted.onrender.com/send-interested-email", formData);
       alert("Form submitted successfully!");
       onClose();
     } catch (error) {
