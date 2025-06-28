@@ -14,6 +14,7 @@
   
   
   .popupForm {
+    position: relative;
     background: #fff;
     padding: 2rem;
     border-radius: 16px;
@@ -56,7 +57,21 @@
     font-weight: bold;
     cursor: pointer;
   }
-  
+ .closeIcon {
+  position: absolute;
+  top: 10px;
+  right: 15px;
+  font-size: 22px;
+  color: #333;
+  cursor: pointer;
+  transition: color 0.3s ease;
+  z-index: 10;
+}
+.closeIcon:hover {
+  color: red;
+}
+
+
   @media (max-width: 768px) {
     .popupForm {
       width: 95%;

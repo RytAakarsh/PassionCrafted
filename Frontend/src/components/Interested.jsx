@@ -45,6 +45,9 @@ const Interested = ({ onClose }) => {
   return (
     <div className={styles.popupOverlay} onClick={handleOverlayClick}>
       <div className={styles.popupForm} onClick={stopPropagation}>
+        <div className={styles.closeIcon} onClick={onClose}>
+          &times;
+        </div>
         <h2 className={styles.formTitle}>Fill Details</h2>
         <form onSubmit={handleSubmit}>
           <input

@@ -46,6 +46,9 @@ const ContactUs = ({ onClose }) => {
   return (
     <div className={styles.popupOverlay} onClick={handleOverlayClick}>
       <div className={styles.popupForm} onClick={stopPropagation}>
+        <div className={styles.closeIcon} onClick={onClose}>
+          &times;
+        </div>
         <h2 className={styles.formTitle}>Contact Us</h2>
         <form onSubmit={handleSubmit}>
           <input
