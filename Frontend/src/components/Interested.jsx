@@ -48,7 +48,7 @@ const Interested = ({ onClose }) => {
         <div className={styles.closeIcon} onClick={onClose}>
           &times;
         </div>
-        <h2 className={styles.formTitle}>Please fill in the details to proceed</h2>
+        <h2 className={styles.formTitle}>Express Your Interest</h2>
         <form onSubmit={handleSubmit}>
           <input
             name="name"
