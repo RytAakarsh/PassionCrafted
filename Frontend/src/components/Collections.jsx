@@ -1,55 +1,57 @@
 import React, { useState } from "react";
 import styles from "./Collections.module.css";
+import { useNavigate } from 'react-router-dom';
 import Interested from "./Interested.jsx";
 
 // ✅ Import Images
-import imgR1 from "../assets/Picture/Reshmi RO (1).jpeg";
-import imgR2 from "../assets/Picture/Reshmi RO (2).jpeg";
-import imgR3 from "../assets/Picture/Reshmi RO (3).jpeg";
-import imgR4 from "../assets/Picture/Reshmi RO (4).jpeg";
-import imgR5 from "../assets/Picture/Reshmi RO (5).jpeg";
-import imgR6 from "../assets/Picture/Reshmi RO (6).jpeg";
-import imgR7 from "../assets/Picture/Reshmi RO (7).jpeg";
-import imgR8 from "../assets/Picture/Reshmi RO (8).jpeg";
-import imgR9 from "../assets/Picture/Reshmi RO (9).jpeg";
-import imgR10 from "../assets/Picture/Reshmi RO (10).jpeg";
-import imgR11 from "../assets/Picture/Reshmi RO (11).jpeg";
-import imgR12 from "../assets/Picture/Reshmi RO (12).jpeg";
-import imgR13 from "../assets/Picture/Reshmi RO (13).jpeg";
-import imgR14 from "../assets/Picture/Reshmi RO (14).jpeg";
-import imgR15 from "../assets/Picture/Reshmi RO (15).jpeg";
-import imgR16 from "../assets/Picture/Reshmi RO (16).jpeg";
-import imgR17 from "../assets/Picture/Reshmi RO (17).jpeg";
-import imgR18 from "../assets/Picture/Reshmi RO (18).jpeg";
-import imgR19 from "../assets/Picture/Reshmi RO (19).jpeg";
-import imgR20 from "../assets/Picture/Reshmi RO (20).jpeg";
-import imgR21 from "../assets/Picture/Reshmi RO (21).jpeg";
-import imgR22 from "../assets/Picture/Reshmi RO (22).jpeg";
-import imgR23 from "../assets/Picture/Reshmi RO (23).jpeg";
-import imgR24 from "../assets/Picture/Reshmi RO (24).jpeg";
-import imgR25 from "../assets/Picture/Reshmi RO (25).jpeg";
-import imgR26 from "../assets/Picture/Reshmi RO (26).jpeg";
-import imgR27 from "../assets/Picture/Reshmi RO (27).jpeg";
-import imgR28 from "../assets/Picture/Reshmi RO (28).jpeg";
-import imgR29 from "../assets/Picture/Reshmi RO (29).jpeg";
-import imgR30 from "../assets/Picture/Reshmi RO (30).jpeg";
-import imgR31 from "../assets/Picture/Reshmi RO (31).jpeg";
-import imgR32 from "../assets/Picture/Reshmi RO (32).jpeg";
-import imgR33 from "../assets/Picture/Reshmi RO (33).jpeg";
-import imgR34 from "../assets/Picture/Reshmi RO (34).jpeg";
-import imgR35 from "../assets/Picture/Reshmi RO (35).jpeg";
-import imgR36 from "../assets/Picture/Reshmi RO (36).jpeg";
-import imgR37 from "../assets/Picture/Reshmi RO (37).jpeg";
-import imgR38 from "../assets/Picture/Reshmi RO (38).jpeg";
-import imgR39 from "../assets/Picture/Reshmi RO (39).jpeg";
-import imgR40 from "../assets/Picture/Reshmi RO (40).jpeg";
-import imgR41 from "../assets/Picture/Reshmi RO (41).jpeg";
-import imgR42 from "../assets/Picture/Reshmi RO (42).jpeg";
-import imgR43 from "../assets/Picture/Reshmi RO (43).jpeg";
-import imgR44 from "../assets/Picture/Reshmi RO (44).jpeg";
-import imgR45 from "../assets/Picture/Reshmi RO (45).jpeg";
-import imgR46 from "../assets/Picture/Reshmi RO (46).jpeg";
-import imgR47 from "../assets/Picture/Reshmi RO (47).jpeg";
+import imgR1 from "../assets/Picture/Reshmi-RO-1.jpeg";
+import imgR2 from "../assets/Picture/Reshmi-RO-2.jpeg";
+import imgR3 from "../assets/Picture/Reshmi-RO-3.jpeg";
+import imgR4 from "../assets/Picture/Reshmi-RO-4.jpeg";
+import imgR5 from "../assets/Picture/Reshmi-RO-5.jpeg";
+import imgR6 from "../assets/Picture/Reshmi-RO-6.jpeg";
+import imgR7 from "../assets/Picture/Reshmi-RO-7.jpeg";
+import imgR8 from "../assets/Picture/Reshmi-RO-8.jpeg";
+import imgR9 from "../assets/Picture/Reshmi-RO-9.jpeg";
+import imgR10 from "../assets/Picture/Reshmi-RO-10.jpeg";
+import imgR11 from "../assets/Picture/Reshmi-RO-11.jpeg";
+import imgR12 from "../assets/Picture/Reshmi-RO-12.jpeg";
+import imgR13 from "../assets/Picture/Reshmi-RO-13.jpeg";
+import imgR14 from "../assets/Picture/Reshmi-RO-14.jpeg";
+import imgR15 from "../assets/Picture/Reshmi-RO-15.jpeg";
+import imgR16 from "../assets/Picture/Reshmi-RO-16.jpeg";
+import imgR17 from "../assets/Picture/Reshmi-RO-17.jpeg";
+import imgR18 from "../assets/Picture/Reshmi-RO-18.jpeg";
+import imgR19 from "../assets/Picture/Reshmi-RO-19.jpeg";
+import imgR20 from "../assets/Picture/Reshmi-RO-20.jpeg";
+import imgR21 from "../assets/Picture/Reshmi-RO-21.jpeg";
+import imgR22 from "../assets/Picture/Reshmi-RO-22.jpeg";
+import imgR23 from "../assets/Picture/Reshmi-RO-23.jpeg";
+import imgR24 from "../assets/Picture/Reshmi-RO-24.jpeg";
+import imgR25 from "../assets/Picture/Reshmi-RO-25.jpeg";
+import imgR26 from "../assets/Picture/Reshmi-RO-26.jpeg";
+import imgR27 from "../assets/Picture/Reshmi-RO-27.jpeg";
+import imgR28 from "../assets/Picture/Reshmi-RO-28.jpeg";
+import imgR29 from "../assets/Picture/Reshmi-RO-29.jpeg";
+import imgR30 from "../assets/Picture/Reshmi-RO-30.jpeg";
+import imgR31 from "../assets/Picture/Reshmi-RO-31.jpeg";
+import imgR32 from "../assets/Picture/Reshmi-RO-32.jpeg";
+import imgR33 from "../assets/Picture/Reshmi-RO-33.jpeg";
+import imgR34 from "../assets/Picture/Reshmi-RO-34.jpeg";
+import imgR35 from "../assets/Picture/Reshmi-RO-35.jpeg";
+import imgR36 from "../assets/Picture/Reshmi-RO-36.jpeg";
+import imgR37 from "../assets/Picture/Reshmi-RO-37.jpeg";
+import imgR38 from "../assets/Picture/Reshmi-RO-38.jpeg";
+import imgR39 from "../assets/Picture/Reshmi-RO-39.jpeg";
+import imgR40 from "../assets/Picture/Reshmi-RO-40.jpeg";
+import imgR41 from "../assets/Picture/Reshmi-RO-41.jpeg";
+import imgR42 from "../assets/Picture/Reshmi-RO-42.jpeg";
+import imgR43 from "../assets/Picture/Reshmi-RO-43.jpeg";
+import imgR44 from "../assets/Picture/Reshmi-RO-44.jpeg";
+import imgR45 from "../assets/Picture/Reshmi-RO-45.jpeg";
+import imgR46 from "../assets/Picture/Reshmi-RO-46.jpeg";
+import imgR47 from "../assets/Picture/Reshmi-RO-47.jpeg";
+
 
 // ✅ Painting Collection Data
 const paintingCollections = [
@@ -110,11 +112,34 @@ const paintingCollections = [
 const Collections = () => {
   const [search, setSearch] = useState("");
   const [showPopup, setShowPopup] = useState(false);
+  const [selectedPainting, setSelectedPainting] = useState(null);
+  const [activePainting, setActivePainting] = useState(null);
+  const navigate = useNavigate();
 
-  const openPopup = () => setShowPopup(true);
+  const openPopup = (painting) => {
+    setSelectedPainting(painting);
+    setShowPopup(true);
+  };
+
   const closePopup = () => setShowPopup(false);
 
-  const filteredCollections = paintingCollections.filter((collection) =>
+  const handleKnowMore = (e, id) => {
+    e.stopPropagation();
+    navigate(`/painting/${id}`);
+  };
+
+  const handlePaintingInteraction = (paintingId, isActive) => {
+    setActivePainting(isActive ? paintingId : null);
+  };
+
+  const filteredCollections = paintingCollections.map(collection => ({
+    ...collection,
+    paintings: collection.paintings.map(painting => ({
+      ...painting,
+      // Add IDs if they don't exist (match these with your PaintingInformation IDs)
+      id: painting.id || collection.paintings.indexOf(painting) + 1
+    }))
+  })).filter(collection =>
     collection.title.toLowerCase().includes(search.toLowerCase())
   );
 
@@ -136,7 +161,9 @@ const Collections = () => {
               <div
                 key={idx}
                 className={styles.paintingCard}
-                onClick={openPopup}
+                onMouseEnter={() => handlePaintingInteraction(painting.id, true)}
+                onMouseLeave={() => handlePaintingInteraction(painting.id, false)}
+                onClick={() => handlePaintingInteraction(painting.id, activePainting !== painting.id)}
               >
                 <div className={styles.imageWrapper}>
                   <img
@@ -144,6 +171,25 @@ const Collections = () => {
                     alt={painting.title}
                     className={styles.paintingImage}
                   />
+                  {activePainting === painting.id && (
+                    <div className={styles.paintingButtons}>
+                      <button 
+                        className={styles.knowMoreBtn}
+                        onClick={(e) => handleKnowMore(e, painting.id)}
+                      >
+                        Know More
+                      </button>
+                      <button 
+                        className={styles.interestedBtn}
+                        onClick={(e) => {
+                          e.stopPropagation();
+                          openPopup(painting);
+                        }}
+                      >
+                        Interested
+                      </button>
+                    </div>
+                  )}
                 </div>
                 <p className={styles.paintingName}>{painting.title}</p>
                 <p className={styles.artistName}>{painting.artist}</p>

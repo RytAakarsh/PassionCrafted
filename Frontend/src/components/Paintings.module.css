@@ -201,4 +201,53 @@
       font-size: 0.8rem;
     }
   }
-  
+  .paintingButtons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 2;
+}
+
+.knowMoreBtn, .interestedBtn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.knowMoreBtn {
+  background-color: #fff;
+  color: #000;
+}
+
+.interestedBtn {
+  background-color: #9C1D32;
+  color: #fff;
+}
+
+.paintingFrame {
+  position: relative;
+}
+
+.paintingFrame::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.3);
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.paintingItem:hover .paintingFrame::after,
+.paintingItem.clicked .paintingFrame::after {
+  opacity: 1;
+}

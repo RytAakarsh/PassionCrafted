@@ -16,8 +16,8 @@
   .mainImage {
     max-width: 100%;
     height: auto;
-    border: 4px solid #ccc;
-    border-radius: 12px;
+    border: 8px solid #d4c89c;
+    box-shadow: 0 3px 10px rgba(0, 0, 0, 0.2);
   }
   
   .infoSection {
@@ -106,25 +106,46 @@
   }
   
   }
-  .moreFromArtist {
-  text-align: center;
-  margin: 20px 0;
-  padding: 30px 0;
-  font-size: 1.5rem;
+  .paintingWrapper {
+  position: relative;
+  cursor: pointer;
 }
 
-.viewAllButton {
+.paintingButtons {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  z-index: 2;
+}
+
+.knowMoreBtn, .interestedBtn {
+  padding: 8px 16px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+.knowMoreBtn {
+  background-color: #fff;
+  color: #000;
+  font-size: 0.7rem;
+}
+
+.interestedBtn {
   background-color: #9C1D32;
   color: #fff;
-  border: none;
-  padding: 12px 24px;
-  font-size: 16px;
-  cursor: pointer;
-  margin-top: 20px;
-  transition: background-color 0.3s ease;
-  border-radius: 10px;
 }
 
-.viewAllButton:hover {
-  background-color: #7a1f28;
+.moreImage {
+  transition: opacity 0.3s ease;
+}
+
+.paintingWrapper:hover .moreImage {
+  opacity: 0.8;
 }

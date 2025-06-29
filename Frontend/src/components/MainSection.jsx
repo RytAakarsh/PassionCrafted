@@ -121,7 +121,7 @@ function MainSection() {
               </button>
               <button
                 className={styles.knowMoreButton}
-                onClick={() => navigate(`/painting/${paintings[currentIndex].id}`)}
+                onClick={() => navigate(`/main-painting/${paintings[currentIndex].id}`)}
               >
                 Know More
               </button>

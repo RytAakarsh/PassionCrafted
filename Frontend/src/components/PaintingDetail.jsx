@@ -1,33 +1,62 @@
-import { useParams } from "react-router-dom";
+import { useParams ,  useNavigate } from "react-router-dom";
 import Navbar from './Navbar';
 import styles from './PaintingDetail.module.css';
+
+
 import img1 from "../assets/Picture/1.png";
 import img2 from "../assets/Picture/2.png";
 import img3 from "../assets/Picture/3.png";
-import imgR1 from "../assets/Picture/Reshmi RO (1).jpeg";
-import imgR2 from "../assets/Picture/Reshmi RO (2).jpeg";
-import imgR3 from "../assets/Picture/Reshmi RO (3).jpeg";
-import imgR4 from "../assets/Picture/Reshmi RO (4).jpeg";
-import imgR5 from "../assets/Picture/Reshmi RO (5).jpeg";
-import imgR6 from "../assets/Picture/Reshmi RO (6).jpeg";
-import imgR7 from "../assets/Picture/Reshmi RO (7).jpeg";
-import imgR8 from "../assets/Picture/Reshmi RO (8).jpeg";
-import imgR9 from "../assets/Picture/Reshmi RO (9).jpeg";
-import imgR10 from "../assets/Picture/Reshmi RO (10).jpeg";
-import imgR11 from "../assets/Picture/Reshmi RO (11).jpeg";
-import imgR12 from "../assets/Picture/Reshmi RO (12).jpeg";
-import imgR13 from "../assets/Picture/Reshmi RO (13).jpeg";
-import imgR14 from "../assets/Picture/Reshmi RO (14).jpeg";
-import imgR15 from "../assets/Picture/Reshmi RO (15).jpeg";
-import imgR16 from "../assets/Picture/Reshmi RO (16).jpeg";
-import imgR17 from "../assets/Picture/Reshmi RO (17).jpeg";
-import imgR18 from "../assets/Picture/Reshmi RO (18).jpeg";
-import imgR19 from "../assets/Picture/Reshmi RO (19).jpeg";
-import imgR20 from "../assets/Picture/Reshmi RO (20).jpeg";
-import imgR21 from "../assets/Picture/Reshmi RO (21).jpeg";
-import imgR22 from "../assets/Picture/Reshmi RO (22).jpeg";
-import imgR23 from "../assets/Picture/Reshmi RO (23).jpeg";
-import imgR24 from "../assets/Picture/Reshmi RO (24).jpeg";
+
+
+import imgR1 from "../assets/Picture/Reshmi-RO-1.jpeg";
+import imgR2 from "../assets/Picture/Reshmi-RO-2.jpeg";
+import imgR3 from "../assets/Picture/Reshmi-RO-3.jpeg";
+import imgR4 from "../assets/Picture/Reshmi-RO-4.jpeg";
+import imgR5 from "../assets/Picture/Reshmi-RO-5.jpeg";
+import imgR6 from "../assets/Picture/Reshmi-RO-6.jpeg";
+import imgR7 from "../assets/Picture/Reshmi-RO-7.jpeg";
+import imgR8 from "../assets/Picture/Reshmi-RO-8.jpeg";
+import imgR9 from "../assets/Picture/Reshmi-RO-9.jpeg";
+import imgR10 from "../assets/Picture/Reshmi-RO-10.jpeg";
+import imgR11 from "../assets/Picture/Reshmi-RO-11.jpeg";
+import imgR12 from "../assets/Picture/Reshmi-RO-12.jpeg";
+import imgR13 from "../assets/Picture/Reshmi-RO-13.jpeg";
+import imgR14 from "../assets/Picture/Reshmi-RO-14.jpeg";
+import imgR15 from "../assets/Picture/Reshmi-RO-15.jpeg";
+import imgR16 from "../assets/Picture/Reshmi-RO-16.jpeg";
+import imgR17 from "../assets/Picture/Reshmi-RO-17.jpeg";
+import imgR18 from "../assets/Picture/Reshmi-RO-18.jpeg";
+import imgR19 from "../assets/Picture/Reshmi-RO-19.jpeg";
+import imgR20 from "../assets/Picture/Reshmi-RO-20.jpeg";
+import imgR21 from "../assets/Picture/Reshmi-RO-21.jpeg";
+import imgR22 from "../assets/Picture/Reshmi-RO-22.jpeg";
+import imgR23 from "../assets/Picture/Reshmi-RO-23.jpeg";
+import imgR24 from "../assets/Picture/Reshmi-RO-24.jpeg";
+import imgR25 from "../assets/Picture/Reshmi-RO-25.jpeg";
+import imgR26 from "../assets/Picture/Reshmi-RO-26.jpeg";
+import imgR27 from "../assets/Picture/Reshmi-RO-27.jpeg";
+import imgR28 from "../assets/Picture/Reshmi-RO-28.jpeg";
+import imgR29 from "../assets/Picture/Reshmi-RO-29.jpeg";
+import imgR30 from "../assets/Picture/Reshmi-RO-30.jpeg";
+import imgR31 from "../assets/Picture/Reshmi-RO-31.jpeg";
+import imgR32 from "../assets/Picture/Reshmi-RO-32.jpeg";
+import imgR33 from "../assets/Picture/Reshmi-RO-33.jpeg";
+import imgR34 from "../assets/Picture/Reshmi-RO-34.jpeg";
+import imgR35 from "../assets/Picture/Reshmi-RO-35.jpeg";
+import imgR36 from "../assets/Picture/Reshmi-RO-36.jpeg";
+import imgR37 from "../assets/Picture/Reshmi-RO-37.jpeg";
+import imgR38 from "../assets/Picture/Reshmi-RO-38.jpeg";
+import imgR39 from "../assets/Picture/Reshmi-RO-39.jpeg";
+import imgR40 from "../assets/Picture/Reshmi-RO-40.jpeg";
+import imgR41 from "../assets/Picture/Reshmi-RO-41.jpeg";
+import imgR42 from "../assets/Picture/Reshmi-RO-42.jpeg";
+import imgR43 from "../assets/Picture/Reshmi-RO-43.jpeg";
+import imgR44 from "../assets/Picture/Reshmi-RO-44.jpeg";
+import imgR45 from "../assets/Picture/Reshmi-RO-45.jpeg";
+import imgR46 from "../assets/Picture/Reshmi-RO-46.jpeg";
+import imgR47 from "../assets/Picture/Reshmi-RO-47.jpeg";
+
+
 
 const paintingDetails = [
   {
@@ -70,7 +99,12 @@ const paintingDetails = [
 
 function PaintingDetail() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const painting = paintingDetails.find(p => p.id === Number(id));
+
+  const handleViewAll = () => {
+    navigate('/collections'); // Adjust this route if your collections page has a different path
+  };
 
   if (!painting) return <div>Painting not found.</div>;
 
@@ -93,11 +127,12 @@ function PaintingDetail() {
       </div>
       <div className={styles.moreFromArtist}>
         <h2>More From The Artist</h2>
-        <div className={styles.moreImagesGrid}>
-          {painting.moreImages.map((img, idx) => (
-            <img key={idx} src={img} alt={`More from ${painting.artist}`} className={styles.moreImage} />
-          ))}
-        </div>
+        <button 
+          className={styles.viewAllButton}
+          onClick={handleViewAll}
+        >
+          View All
+        </button>
       </div>
     </>
   );
