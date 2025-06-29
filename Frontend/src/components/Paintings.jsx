@@ -556,6 +556,10 @@ function Paintings() {
     });
   };
 
+  const handleFilterSubmit = () => {
+    setIsFilterOpen(false);
+  };
+
   useEffect(() => {
     let filteredPaintings = [...allPaintings];
 
@@ -587,11 +591,10 @@ function Paintings() {
 
   const handleKnowMore = (e, id) => {
     e.stopPropagation();
-    navigate(`/painting/${id}`); // Changed to point to PaintingInformation route
+    navigate(`/painting/${id}`);
   };
 
   const handlePaintingClick = (painting, e) => {
-    // For mobile view
     if (window.innerWidth <= 768) {
       if (clickedPainting === painting.id) {
         setClickedPainting(null);
@@ -599,18 +602,16 @@ function Paintings() {
         setClickedPainting(painting.id);
       }
     } else {
-      // For desktop view, open interest form
       openInterestPopup(painting);
     }
   };
 
   const handlePaintingHover = (paintingId, isHovering) => {
-    if (window.innerWidth > 768) { // Only for desktop
+    if (window.innerWidth > 768) {
       setHoveredPainting(isHovering ? paintingId : null);
     }
   };
 
-  // Get unique values for filters
   const uniqueArtists = [...new Set(allPaintings.map(p => p.artist))];
   const uniqueTypes = [...new Set(allPaintings.map(p => p.type))];
   const uniqueDimensions = [...new Set(allPaintings.map(p => p.dimension))];
@@ -674,16 +675,24 @@ function Paintings() {
               </select>
             </div>
 
-            <button 
-              className={styles.resetButton}
-              onClick={() => setFilters({
-                artist: '',
-                type: '',
-                dimension: ''
-              })}
-            >
-              Reset Filters
-            </button>
+            <div className={styles.filterActions}>
+              <button 
+                className={styles.resetButton}
+                onClick={() => setFilters({
+                  artist: '',
+                  type: '',
+                  dimension: ''
+                })}
+              >
+                Reset
+              </button>
+              <button 
+                className={styles.submitButton}
+                onClick={handleFilterSubmit}
+              >
+                Apply
+              </button>
+            </div>
           </div>
         )}
       </div>
@@ -740,9 +749,6 @@ function Paintings() {
 
       {showPopup && <Interested onClose={() => setShowPopup(false)} />}
     </div>
-
-
-     
   );
 }
 

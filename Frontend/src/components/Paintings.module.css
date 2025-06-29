@@ -251,3 +251,41 @@
 .paintingItem.clicked .paintingFrame::after {
   opacity: 1;
 }
+.filterActions {
+  display: flex;
+  gap: 10px;
+  margin-top: 20px;
+}
+
+.submitButton {
+  background-color: #9C1D32;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  flex: 1;
+  transition: background-color 0.3s ease;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 1rem;
+}
+
+.submitButton:hover {
+  background-color: #7a1a2a;
+}
+
+.resetButton {
+  background-color: #f0f0f0;
+  color: #000;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  flex: 1;
+  transition: background-color 0.3s ease;
+  border-radius: 20px;
+  font-size: 1rem;
+}
+
+.resetButton:hover {
+  background-color: #e0e0e0;
+}
